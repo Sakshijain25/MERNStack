@@ -1,11 +1,13 @@
 import express from "express";
-import {getStudent} from '../controllers/student.js'
+import {getStudent, createStudent} from '../controllers/student.js'
+import student from "../models/student.js";
 
 const router = express.Router();
 router.get('/', getStudent);
+router.post('/', createStudent);
 
 // export const router2 = express.Router()
-// router2.get('/', (req, res)=> {
+// router.get('/', (req, res)=> {
 //     res.send("Router is working.");
 // });
 // router.get("/:universalURL", (req, res) => {
